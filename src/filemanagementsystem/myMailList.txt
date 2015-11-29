@@ -1,0 +1,4 @@
+FirstName|LastName|StreetAddress|City|State|ZipCode
+Shruthi|Routhu|N64W24375 Ivy Ave Apt#2|Sussex|WI|53089
+Prasanna|Muddada|N11W11111 Quad Graphics|Sussex|WI|53089
+Jim|Lombardo|N22W22222 WCTC L-Building|Pewaukee|WI|53006
