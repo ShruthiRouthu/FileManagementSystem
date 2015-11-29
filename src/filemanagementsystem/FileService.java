@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class FileService {
     
-    public static String VALIDATION_MSG = "Input argument cannot be null" ;
+    private static final String VALIDATION_MSG = "Input argument cannot be null" ;
     
     private TextReader textReader;
     private TextWriter textWriter;
@@ -22,7 +22,7 @@ public class FileService {
     }
     
     // METHODS
-    public final List<Map<String,Object>> read(File file, FormatStrategy formatStrategy) throws IllegalArgumentException {
+    public final List<Map<String,Object>> read(final File file,final FormatStrategy formatStrategy) throws IllegalArgumentException {
         
         if( !file.exists() || (formatStrategy == null)){
             throw new IllegalArgumentException(VALIDATION_MSG); 
@@ -30,7 +30,7 @@ public class FileService {
         return textReader.read(file, formatStrategy);
     }
     
-    public final void write(File file, FormatStrategy formatStrategy ,List<Map<String,Object>> myData) throws IllegalArgumentException{
+    public final void write(final File file, FormatStrategy formatStrategy ,final List<Map<String,Object>> myData) throws IllegalArgumentException{
         
         if( !file.exists() || (formatStrategy == null) || (myData == null)){
             throw new IllegalArgumentException(VALIDATION_MSG); 

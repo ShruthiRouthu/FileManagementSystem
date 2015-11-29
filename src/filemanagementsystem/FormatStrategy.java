@@ -10,8 +10,8 @@ import java.util.Map;
  */
 public interface FormatStrategy {
     
-    public List<String> encode(List<Map<String,Object>> myFormatData);
+    public List<String> encode(final List<Map<String,Object>> myFormatData);
     
-    public List<Map<String,Object>> decode(List<String> rawData);
+    public List<Map<String,Object>> decode(final List<String> rawData);
     
 }

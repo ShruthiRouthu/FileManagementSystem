@@ -11,17 +11,17 @@ import java.util.Map;
  */
 public class JsonFormatter implements FormatStrategy {
     
-    public static final String FIRST_NAME = "FirstName";
-    public static final String LAST_NAME = "LastName";
-    public static final String STREET_ADDRESS = "StreetAddress";
-    public static final String CITY = "City";
-    public static final String STATE = "State";
-    public static final String ZIP_CODE = "ZipCode";
+    private static final String FIRST_NAME = "FirstName";
+    private static final String LAST_NAME = "LastName";
+    private static final String STREET_ADDRESS = "StreetAddress";
+    private static final String CITY = "City";
+    private static final String STATE = "State";
+    private static final String ZIP_CODE = "ZipCode";
     
-    public static String VALIDATION_MSG = "Input to method is invalid!" ;
+    private static final String VALIDATION_MSG = "Input to method is invalid!" ;
 
     @Override
-    public List<String> encode(List<Map<String, Object>> myFormatData) throws IllegalArgumentException{
+    public final List<String> encode(final List<Map<String, Object>> myFormatData) throws IllegalArgumentException{
         
         if( myFormatData== null || myFormatData.size() == 0) {
             throw new IllegalArgumentException(VALIDATION_MSG);
@@ -102,7 +102,7 @@ public class JsonFormatter implements FormatStrategy {
     }
 
     @Override
-    public List<Map<String, Object>> decode(List<String> rawData) throws IllegalArgumentException {
+    public final List<Map<String, Object>> decode(final List<String> rawData) throws IllegalArgumentException {
         if( rawData== null || rawData.size() == 0) {
             throw new IllegalArgumentException(VALIDATION_MSG);
         }

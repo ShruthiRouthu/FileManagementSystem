@@ -1,6 +1,6 @@
 package filemanagementsystem;
 
-import static filemanagementsystem.FileService.VALIDATION_MSG;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -15,9 +15,9 @@ import java.util.Map;
  */
 public class TextWriter {
     
-     public static String VALIDATION_MSG = "Input argument cannot be null" ; 
+     private static final String VALIDATION_MSG = "Input argument cannot be null" ; 
      
-     public final void write(File file, FormatStrategy formatStrategy ,List<Map<String,Object>> myFormatData) throws IllegalArgumentException {
+     public final void write(final File file, FormatStrategy formatStrategy ,final List<Map<String,Object>> myFormatData) throws IllegalArgumentException {
          
         if( !file.exists() || (formatStrategy == null) || (myFormatData == null)){
             throw new IllegalArgumentException(VALIDATION_MSG); 

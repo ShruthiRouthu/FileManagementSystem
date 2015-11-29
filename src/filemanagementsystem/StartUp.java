@@ -17,7 +17,7 @@ public class StartUp {
         FileService fileService = new FileService(new TextReader() , new TextWriter() );
         
         //File myFile = new File("mailList.json");
-        File myFile = new File("/WCTC 2015 Fall/AdvancedJavaF/FileManagementSystem/src/filemanagementsystem/mailList.json");
+        File myFile = new File("/WCTC 2015 Fall/AdvancedJavaF/FileManagementSystem/src/filemanagementsystem/mailList.csv");
         
         
 //        if(myFile.exists()){
@@ -25,13 +25,13 @@ public class StartUp {
 //            System.out.println("YAy");
 //        }
 //    
-        List<Map<String,Object>> data = fileService.read( myFile , new JsonFormatter());
+        List<Map<String,Object>> data = fileService.read( myFile , new CSVFormatter());
         
         for(Map m : data ){
            System.out.println(m.toString()); 
         }
         
-        fileService.write(myFile, new JsonFormatter() , data);
+        fileService.write(myFile, new CSVFormatter() , data);
         
         
     } 

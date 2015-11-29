@@ -15,9 +15,9 @@ import java.util.Map;
  */
 public class TextReader {
     
-    public static String VALIDATION_MSG = "Input argument cannot be null" ;
+    private final static String VALIDATION_MSG = "Input argument cannot be null" ;
     
-    public final List<Map<String,Object>> read(File file, FormatStrategy formatStrategy) throws IllegalArgumentException {
+    public final List<Map<String,Object>> read(final File file, final FormatStrategy formatStrategy) throws IllegalArgumentException {
         
         if( !file.exists() || (formatStrategy == null)){
             throw new IllegalArgumentException(VALIDATION_MSG); 
